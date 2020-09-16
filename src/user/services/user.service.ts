@@ -19,7 +19,7 @@ export class UserService {
   async getUser(userId: number): Promise<User> {
     const user = await this.userRepository.findOne(userId);
     if (!user) {
-      throw new NotFoundException('My message');
+      throw new NotFoundException('The user does not exist.');
     }
 
     return user;
@@ -36,6 +36,8 @@ export class UserService {
   }
 
   async deleteUser(userId): Promise<void> {
+    await this.getUser(userId);
+
     await this.userRepository.delete(userId);
   }
 }

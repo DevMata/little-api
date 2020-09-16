@@ -3,6 +3,8 @@ import {
   Controller,
   Delete,
   Get,
+  HttpCode,
+  HttpStatus,
   Param,
   Patch,
   Post,
@@ -39,6 +41,7 @@ export class UserController {
     return this.userService.updateUser(userId, updateUser);
   }
 
+  @HttpCode(HttpStatus.NO_CONTENT)
   @Delete(':userId')
   deleteUser(@Param('userId') userId: number): Promise<void> {
     return this.userService.deleteUser(userId);
