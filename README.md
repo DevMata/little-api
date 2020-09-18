@@ -14,6 +14,19 @@ This little API is built around a user crud to give example of common concepts l
 $ npm install
 ```
 
+## Before running the app
+
+Replace the url with your own database url
+
+``` ts
+TypeOrmModule.forRoot({
+  type: 'postgres',
+  url: 'postgres://<user>:<password>@<host>:<port>/<database>',
+  entities: ['dist/**/*.entity.js'],
+  synchronize: true,
+}),
+```
+
 ## Running the app
 
 ```bash
