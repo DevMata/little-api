@@ -8,8 +8,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     TypeOrmModule.forRoot({
       type: 'postgres',
       url: 'postgres://nestjs:nestjs4tw@localhost:5432/nestjs',
-      synchronize: true,
       entities: ['dist/**/*.entity.js'],
+      synchronize: true,
     }),
   ],
   controllers: [],
