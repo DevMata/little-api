@@ -7,7 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     UserModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      url: 'postgres://nestjs:nestjs4tw@localhost:5432/nestjs',
+      url: 'postgres://nestjs:nestjs4tw@localhost:5432/nestjs', //reemplazar con propia conexión
       entities: ['dist/**/*.entity.js'],
       synchronize: true,
     }),
