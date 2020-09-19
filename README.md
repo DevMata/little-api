@@ -56,3 +56,9 @@ $ npm run test:cov
 ## References
 * [NestJs Docs](https://docs.nestjs.com/)
 * [Typeorm Docs](https://typeorm.io/)
+
+## Resources for learning
+* [NestJs series - Youtube playlist in spanish](https://www.youtube.com/playlist?list=PLzHaXzj_WAyk9NF0OIa1gRYqAntHF0fMF)
+* [NestJs profile on dev.to](https://dev.to/nestjs)
+* [NestJs:From zero to hero - Udemy](https://www.udemy.com/course/nestjs-zero-to-hero/)
+* [Official courses](https://courses.nestjs.com/)
