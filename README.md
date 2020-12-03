@@ -16,16 +16,18 @@ $ npm install
 
 ## Before running the app
 
-Replace the url with your own database url
+Check the example.env file to know the required env variables.
 
-``` ts
-TypeOrmModule.forRoot({
-  type: 'postgres',
-  url: 'postgres://<user>:<password>@<host>:<port>/<database>',
-  entities: ['dist/**/*.entity.js'],
-  synchronize: true,
-}),
 ```
+# DB
+DB_USER=your db user
+DB_PASSWORD=your db password
+DB_HOST=your db host
+DB_PORT=your db port
+DB_NAME=your db name
+```
+
+Then create your own `.env` file and replace the example values.
 
 ## Running the app
 
