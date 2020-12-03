@@ -1,18 +1,13 @@
 import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { TypeOrmConfigService } from './type-orm-config.service';
 
 @Module({
   imports: [
     UserModule,
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      url: 'postgres://nestjs:nestjs4tw@localhost:5432/nestjs', //reemplazar con propia conexión
-      entities: ['dist/**/*.entity.js'],
-      synchronize: true,
-    }),
+    TypeOrmModule.forRootAsync({ useClass: TypeOrmConfigService }),
   ],
-  controllers: [],
-  providers: [],
+  providers: [TypeOrmConfigService],
 })
 export class AppModule {}
